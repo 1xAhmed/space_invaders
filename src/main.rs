@@ -4,7 +4,7 @@ use std::error::Error;
 fn main() -> Result<(), Box<dyn Error>> {
     let mut audio = Audio::new();
     for item in &["explode", "lose", "move", "pew", "startup", "win"] {
-        audio.add(item, &format!("audio/original/{}.wav", item));
+        audio.add(item, &format!("audio/{}.wav", item));
     }
     audio.play("startup");
 
